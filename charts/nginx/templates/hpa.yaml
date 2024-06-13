@@ -1,0 +1,37 @@
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: {{ include "nginx.fullname" . }}-hpa
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: {{ include "nginx.fullname" . }}-deployment
+  minReplicas: {{ .Values.autoscaling.minReplicas }}
+  maxReplicas: {{ .Values.autoscaling.maxReplicas }}
+  behavior:
+    scaleDown:
+      stabilizationWindowSeconds: {{ .Values.autoscaling.stabilizationWindowSeconds }}
+      policies:
+      - type: Percent
+        value: {{ .Values.autoscaling.cpuUtilization }}
+        periodSeconds: {{ .Values.autoscaling.policiesPeriodSeconds }}
+    scaleUp:
+      stabilizationWindowSeconds: {{ .Values.autoscaling.stabilizationWindowSeconds }}
+      policies:
+      - type: Percent
+        value: {{ .Values.autoscaling.cpuUtilization }}
+        periodSeconds: {{ .Values.autoscaling.policiesPeriodSeconds }}
+  metrics:
+  - type: Resource
+    resource:
+      name: cpu
+      target:
+        type: Utilization
+        averageUtilization: {{ .Values.autoscaling.cpuUtilization }}
+  - type: Resource
+    resource:
+      name: memory
+      target:
+        type: Utilization
+        averageUtilization:  {{ .Values.autoscaling.memoryUtilization }}

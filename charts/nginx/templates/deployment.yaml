@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "nginx.fullname" . }}-deployment
+spec:
+  replicas: {{ .Values.autoscaling.minReplicas }}
+  selector:
+    matchLabels:
+      app: {{ include "nginx.fullname" . }}
+  template:
+    metadata:
+      labels:
+        app: {{ include "nginx.fullname" . }}
+        type: nginx
+    spec:
+      containers:
+      - name: {{ include "nginx.fullname" . }}
+        image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"        
+        ports:
+        - containerPort: {{ .Values.service.internalPort }}
+        resources:  
+{{ toYaml .Values.resources | indent 10 }}     
