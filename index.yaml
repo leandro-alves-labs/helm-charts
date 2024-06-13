@@ -1,14 +1,14 @@
 apiVersion: v1
 entries:
-  hello-world:
+  nginx:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2021-03-02T18:36:45.469691322Z"
+    created: "2024-06-13T23:13:16.358903583Z"
     description: A Helm chart for Kubernetes
-    digest: a6fe72c563eb8c9573daa5628cd4b9fc9f64fd8cadc22a20172064279e8d3b1a
-    name: hello-world
+    digest: 36b9e4de1b095b901e36f3c71fbadf534b31ba54874036605b643ee187357e72
+    name: nginx
     type: application
     urls:
-    - https://github.com/helm/examples/releases/download/hello-world-0.1.0/hello-world-0.1.0.tgz
+    - https://github.com/leandro-alves-labs/helm-charts/releases/download/nginx-0.1.0/nginx-0.1.0.tgz
     version: 0.1.0
-generated: "2021-03-02T18:36:45.469704022Z"
+generated: "2024-06-13T23:13:16.358910085Z"
