@@ -2,6 +2,7 @@ image:
   repository: nginx
   pullPolicy: IfNotPresent
   tag: "latest"
+  pullSecrects: ""
 
 fullname: ""
 

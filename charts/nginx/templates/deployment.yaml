@@ -15,8 +15,10 @@ spec:
     spec:
       containers:
       - name: {{ include "nginx.fullname" . }}
-        image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"        
+        image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}" 
         ports:
         - containerPort: {{ .Values.service.internalPort }}
         resources:  
 {{ toYaml .Values.resources | indent 10 }}     
+      imagePullSecrets: 
+      - name: "{{ .Values.image.pullSecrets }}"
