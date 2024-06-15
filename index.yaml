@@ -3,6 +3,16 @@ entries:
   nginx:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2024-06-15T14:29:04.910090741Z"
+    description: A Helm chart for Kubernetes
+    digest: c03a2d773f55996a1f06127eb4f80f5d285c196eab86908588e9da0853060b83
+    name: nginx
+    type: application
+    urls:
+    - https://github.com/leandro-alves-labs/helm-charts/releases/download/nginx-0.1.2/nginx-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2024-06-15T10:55:06.788397579Z"
     description: A Helm chart for Kubernetes
     digest: 323ec7157ddb54552765c0bdaa8096708d7005ea7daa2e4ad80501ea34c8d8e7
@@ -21,4 +31,4 @@ entries:
     urls:
     - https://github.com/leandro-alves-labs/helm-charts/releases/download/nginx-0.1.0/nginx-0.1.0.tgz
     version: 0.1.0
-generated: "2024-06-15T10:55:06.788434108Z"
+generated: "2024-06-15T14:29:04.910109857Z"
