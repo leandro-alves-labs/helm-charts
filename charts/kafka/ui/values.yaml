@@ -1,0 +1,15 @@
+# helm install my-kafka-ui kafka-ui/kafka-ui
+
+service:
+  type: ClusterIP
+  port: 80
+
+yamlApplicationConfig:
+  kafka:
+    clusters:
+      - name: k8s
+        bootstrapServers: kafka-api-bank-service.default.svc.cluster.local:9092
+ingress:
+  enabled: true
+  host: kafka-ui.leandroalves.dev.br
+  ingressClassName: nginx
