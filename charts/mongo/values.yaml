@@ -1,0 +1,25 @@
+fullname: mongo
+
+image:
+  repository: mongo
+  pullPolicy: IfNotPresent
+  tag: "latest"
+
+resources: 
+  limits:
+    cpu: 1000m
+    memory: 1024Mi
+  requests:
+    cpu: 500m
+    memory: 256Mi
+
+service:
+  port: 27017
+
+mongoexpress:
+  enable: true
+  fullname: mongo-express
+  mongo:
+    user: root
+    password: "root123Mudar"
+    servicename: mongo-service.default.svc.cluster.local
