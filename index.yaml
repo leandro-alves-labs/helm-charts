@@ -14,6 +14,16 @@ entries:
   kafka:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2025-01-30T23:02:07.797071989Z"
+    description: A Helm chart for Kubernetes
+    digest: b4279833207ee7201c8625d92d210e3560e0d44d20f3f19180327235900c1115
+    name: kafka
+    type: application
+    urls:
+    - https://github.com/leandro-alves-labs/helm-charts/releases/download/kafka-0.1.3/kafka-0.1.3.tgz
+    version: 0.1.3
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2025-01-29T23:03:12.470665979Z"
     description: A Helm chart for Kubernetes
     digest: 55ef06999f97eb5b54e2cad65881897154c00a14de8121a8f298856aa71d7111
@@ -64,4 +74,4 @@ entries:
     urls:
     - https://github.com/leandro-alves-labs/helm-charts/releases/download/nginx-0.1.0/nginx-0.1.0.tgz
     version: 0.1.0
-generated: "2025-01-30T22:59:43.294516283Z"
+generated: "2025-01-30T23:02:07.797090413Z"
