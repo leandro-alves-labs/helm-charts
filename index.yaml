@@ -1,16 +1,5 @@
 apiVersion: v1
-entries:
-  confluent-cp-kafka:
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2025-01-30T22:59:43.294504131Z"
-    description: A Helm chart for Kubernetes
-    digest: 554c6851fb7c5274f08c006514a6b646e88ec2b2089de729faacd7f4369d9d6a
-    name: confluent-cp-kafka
-    type: application
-    urls:
-    - https://github.com/leandro-alves-labs/helm-charts/releases/download/confluent-cp-kafka-0.1.2/confluent-cp-kafka-0.1.2.tgz
-    version: 0.1.2
+entries:  
   kafka:
   - apiVersion: v2
     appVersion: 1.16.0
@@ -22,6 +11,16 @@ entries:
     urls:
     - https://github.com/leandro-alves-labs/helm-charts/releases/download/kafka-0.1.3/kafka-0.1.3.tgz
     version: 0.1.3
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2025-01-30T22:59:43.294504131Z"
+    description: A Helm chart for Kubernetes
+    digest: 554c6851fb7c5274f08c006514a6b646e88ec2b2089de729faacd7f4369d9d6a
+    name: kafka
+    type: application
+    urls:
+    - https://github.com/leandro-alves-labs/helm-charts/releases/download/confluent-cp-kafka-0.1.2/confluent-cp-kafka-0.1.2.tgz
+    version: 0.1.2
   - apiVersion: v2
     appVersion: 1.16.0
     created: "2025-01-29T23:03:12.470665979Z"
